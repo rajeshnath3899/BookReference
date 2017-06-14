@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Book List Table View Controller-->
+        <!--Book Info-->
         <scene sceneID="92m-CC-lBN">
             <objects>
                 <tableViewController id="yBH-pW-G87" customClass="BookListTableViewController" customModule="BookRefrence" customModuleProvider="target" sceneMemberID="viewController">
@@ -47,7 +47,7 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <imageView userInteractionEnabled="NO" tag="102" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JGw-9a-UuX">
+                                                <imageView userInteractionEnabled="NO" tag="102" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreyStars" translatesAutoresizingMaskIntoConstraints="NO" id="JGw-9a-UuX">
                                                     <rect key="frame" x="201" y="0.0" width="85" height="52"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="85" id="rah-p6-IMH"/>
@@ -78,7 +78,7 @@
                             <outlet property="delegate" destination="yBH-pW-G87" id="HxY-Fa-wvn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="OXm-S5-rwj">
+                    <navigationItem key="navigationItem" title="Book Info" id="OXm-S5-rwj">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zdU-gt-DnS">
                             <connections>
                                 <segue destination="Gpm-4p-7cv" kind="presentation" id="EZo-i1-d2O"/>
@@ -277,4 +277,7 @@
             <point key="canvasLocation" x="1564" y="161"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="GreyStars" width="121" height="22"/>
+    </resources>
 </document>
