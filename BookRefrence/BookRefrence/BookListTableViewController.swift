@@ -80,11 +80,10 @@ class BookListTableViewController: UITableViewController {
             
             let starImage = Rating(rawValue: rating)?.image
             
-            cell.imageView?.image = starImage
+            cell.ratingImageView?.image = starImage
             
             
         }
-        
         
         
         return cell
