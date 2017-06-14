@@ -17,10 +17,8 @@ class BRServiceTransactionManager {
     
     private var dataStore: [Book] // using swift array
     
-    
     static let sharedInstance = BRServiceTransactionManager()
 
-    
     private init() {
         
         dataStore = []
@@ -33,15 +31,12 @@ class BRServiceTransactionManager {
         
         dataStore.append(book)
         completion(.success(true)) // on sucess 
-        
-        
     }
     
     //fetch all books
     
     func getAllBookInfo(completion: @escaping (Result<[Book]>) -> Void) {
         completion(.success(dataStore))
-        
     }
     
     //add rating for book
@@ -54,9 +49,7 @@ class BRServiceTransactionManager {
         book.rating = rating
             
         dataStore[bookIndex] = book
-        
-        //dataStore.insert(book, at: bookIndex)
-        
+            
         completion(.success(true))
         
         } else {
