@@ -17,8 +17,6 @@ class BookListTableViewController: UITableViewController {
         
     }
     
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         
         
@@ -37,11 +35,8 @@ class BookListTableViewController: UITableViewController {
                 
             }
             
-            
         }
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -101,7 +96,6 @@ class BookListTableViewController: UITableViewController {
         self.navigationController?.pushViewController(ratingsViewController, animated: true)
         
     }
-    
     
     enum Rating: Int {
         
