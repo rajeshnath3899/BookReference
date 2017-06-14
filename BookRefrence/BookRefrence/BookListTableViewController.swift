@@ -81,10 +81,7 @@ class BookListTableViewController: UITableViewController {
             let starImage = Rating(rawValue: rating)?.image
             
             cell.ratingImageView?.image = starImage
-            
-            
         }
-        
         
         return cell
     }
@@ -104,8 +101,6 @@ class BookListTableViewController: UITableViewController {
         self.navigationController?.pushViewController(ratingsViewController, animated: true)
         
     }
-    
-    
     
     
     enum Rating: Int {
@@ -143,13 +138,8 @@ class BookListTableViewController: UITableViewController {
                 
             }
             
-            
-            
         }
         
-        
-        
     }
-    
     
 }

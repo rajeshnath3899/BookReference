@@ -40,9 +40,7 @@ class BRServiceTransactionManager {
     //fetch all books
     
     func getAllBookInfo(completion: @escaping (Result<[Book]>) -> Void) {
-        
         completion(.success(dataStore))
-        
         
     }
     
@@ -50,7 +48,7 @@ class BRServiceTransactionManager {
     func addRatingforBook(index:Int?,withRating rating: Int,completion: @escaping (Result<Bool>) -> Void) {
         
         if let bookIndex = index {
-        
+
         var book: Book = dataStore[bookIndex]
         
         book.rating = rating

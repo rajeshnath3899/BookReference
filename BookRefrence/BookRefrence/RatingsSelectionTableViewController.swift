@@ -19,14 +19,6 @@ class RatingsSelectionTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     override func didReceiveMemoryWarning() {
@@ -97,14 +89,11 @@ class RatingsSelectionTableViewController: UITableViewController {
             
         }
         
-        
-        
         cell.accessoryType = .checkmark
-        
     }
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        
+
         let deSelectedCell = tableView.cellForRow(at: indexPath)
         
         guard let cell = deSelectedCell else {
