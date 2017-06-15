@@ -13,7 +13,7 @@
         <!--Book Info-->
         <scene sceneID="92m-CC-lBN">
             <objects>
-                <tableViewController id="yBH-pW-G87" customClass="BookListTableViewController" customModule="BookRefrence" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BookInfoId" id="yBH-pW-G87" customClass="BookListTableViewController" customModule="BookRefrence" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" id="ICc-ZD-JBB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,59 +113,16 @@
                             <outlet property="delegate" destination="neR-ed-vzx" id="MMd-2L-W1C"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="aL5-OM-g0T"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hy4-Ex-2jf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="694" y="922"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="eBf-ZB-FuN">
-            <objects>
-                <tableViewController id="eef-OP-RcR" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="O39-NS-k60">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="1CK-T7-lnQ" detailTextLabel="ahu-Wi-q3Q" style="IBUITableViewCellStyleSubtitle" id="4w0-V0-lUp">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4w0-V0-lUp" id="PQ3-XM-g96">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1CK-T7-lnQ">
-                                            <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ahu-Wi-q3Q">
-                                            <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="eef-OP-RcR" id="gCi-HA-Pc8"/>
-                            <outlet property="delegate" destination="eef-OP-RcR" id="nRu-fQ-Bg5"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Gd-Jk-MhA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3938.4000000000001" y="1489.2053973013494"/>
+            <point key="canvasLocation" x="694" y="824"/>
         </scene>
         <!--Add Book Info Table View Controller-->
         <scene sceneID="sUa-eP-Zyl">
             <objects>
-                <tableViewController id="nyR-Hs-h2P" customClass="AddBookInfoTableViewController" customModule="BookRefrence" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AddBookInfoId" id="nyR-Hs-h2P" customClass="AddBookInfoTableViewController" customModule="BookRefrence" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kVX-qO-hCh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

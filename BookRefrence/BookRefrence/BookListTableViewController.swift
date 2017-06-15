@@ -19,7 +19,6 @@ class BookListTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        
         BRServiceTransactionManager.sharedInstance.getAllBookInfo { (response) in
             
             switch(response) {
@@ -99,7 +98,9 @@ class BookListTableViewController: UITableViewController {
     
     enum Rating: Int {
         
-        case oneStar = 1
+        case notRated
+        
+        case oneStar
         
         case twoStars
         
@@ -112,6 +113,11 @@ class BookListTableViewController: UITableViewController {
         var image: UIImage {
             
             switch self {
+                
+            case .notRated:
+                
+                return UIImage(named: "GreyStars.png")!
+
             case .oneStar:
                 
                 return UIImage(named: "1Stars.png")!
@@ -129,6 +135,7 @@ class BookListTableViewController: UITableViewController {
             case .fiveStars:
                 
                 return UIImage(named: "5Stars.png")!
+            
                 
             }
             
