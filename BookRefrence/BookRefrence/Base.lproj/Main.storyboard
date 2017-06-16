@@ -93,7 +93,7 @@
         <!--Ratings Selection Table View Controller-->
         <scene sceneID="fRe-QJ-dv4">
             <objects>
-                <tableViewController storyboardIdentifier="ratingsStoryBoardId" id="neR-ed-vzx" customClass="RatingsSelectionTableViewController" customModule="BookRefrence" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="RatingsTableViewControllerID" id="neR-ed-vzx" customClass="RatingsSelectionTableViewController" customModule="BookRefrence" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rml-RH-iUl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

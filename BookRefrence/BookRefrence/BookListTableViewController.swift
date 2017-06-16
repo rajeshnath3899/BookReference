@@ -86,7 +86,7 @@ class BookListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        guard let ratingsViewController: RatingsSelectionTableViewController = storyboard?.instantiateViewController(withIdentifier: Constants.ratingsStoryBoardId) as? RatingsSelectionTableViewController  else {
+        guard let ratingsViewController: RatingsSelectionTableViewController = storyboard?.instantiateViewController(withIdentifier: Constants.RatingsTableViewControllerID) as? RatingsSelectionTableViewController  else {
             return
         }
         

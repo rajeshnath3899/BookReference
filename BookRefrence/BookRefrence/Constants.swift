@@ -9,7 +9,7 @@
 import Foundation
 
 struct Constants {
-    static let ratingsCellreuseId = "RatingsCell"
+    static let RatingsCellreuseId = "RatingsCell"
     static let BookInfoCellreuseId = "BookInfoCell"
-    static let ratingsStoryBoardId = "ratingsStoryBoardId"
+    static let RatingsTableViewControllerID = "RatingsTableViewControllerID"
 }
