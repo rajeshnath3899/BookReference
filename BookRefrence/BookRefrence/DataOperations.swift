@@ -27,7 +27,7 @@ class BRServiceTransactionManager {
     
     //add a book
     
-    func addBookInfo(book: Book, completion: @escaping (Result<Bool>) -> Void) {
+    func addBook(book: Book, completion: @escaping (Result<Bool>) -> Void) {
         
         dataStore.append(book)
         completion(.success(true)) // on sucess 
@@ -35,8 +35,10 @@ class BRServiceTransactionManager {
     
     //fetch all books
     
-    func getAllBookInfo(completion: @escaping (Result<[Book]>) -> Void) {
+    func getAllBooks(completion: @escaping (Result<[Book]>) -> Void) {
         completion(.success(dataStore))
+        //completion(.error("error info"))/* if network call fails error then call */
+ 
     }
     
     //add rating for book

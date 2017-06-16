@@ -46,6 +46,7 @@ class AddBookInfoTableViewController: UITableViewController {
     }
     
     
+    
     @IBAction func Done(_ sender: UIBarButtonItem) {
         
         guard let bookName = bookNameTextField.text, let authorName = authorNameTextField.text else {
@@ -56,7 +57,10 @@ class AddBookInfoTableViewController: UITableViewController {
         
         let book = Book(bookTitle: bookName, authorName: authorName)
         
-        BRServiceTransactionManager.sharedInstance.addBookInfo(book: book) { (response) in
+        
+        BRServiceTransactionManager.sharedInstance.addBook(book: book) { [weak self] (response) in
+            
+            guard let weakSelf = self else { return }
             
             switch (response) {
                 
@@ -64,12 +68,12 @@ class AddBookInfoTableViewController: UITableViewController {
                 
                 if flag {
                     
-                    self.dismiss(animated: true, completion: nil)
+                    weakSelf.dismiss(animated: true, completion: nil)
                     
                 } else {
                     
                     print("Data insertion failed")
-                    self.dismiss(animated: true, completion: nil)
+                    weakSelf.dismiss(animated: true, completion: nil)
                 }
                 
             case .error(let errorInfo):

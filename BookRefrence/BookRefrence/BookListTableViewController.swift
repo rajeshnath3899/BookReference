@@ -19,14 +19,16 @@ class BookListTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        BRServiceTransactionManager.sharedInstance.getAllBookInfo { (response) in
+        BRServiceTransactionManager.sharedInstance.getAllBooks { [weak self] (response)  in
+            
+            guard let weakSelf = self else { return }
             
             switch(response) {
                 
             case .success(let books):
                 
-                self.bookList = books
-                self.tableView.reloadData()
+                weakSelf.bookList = books
+                weakSelf.tableView.reloadData()
                 
             case .error(let errorInfo):
                 
@@ -36,6 +38,9 @@ class BookListTableViewController: UITableViewController {
             
         }
     }
+
+   
+        
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
