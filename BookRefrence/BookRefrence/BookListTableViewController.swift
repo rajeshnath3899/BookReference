@@ -39,9 +39,7 @@ class BookListTableViewController: UITableViewController {
         }
     }
 
-   
-        
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -94,7 +92,7 @@ class BookListTableViewController: UITableViewController {
         
         // ratingsViewController.delegate = self
         lastSelectedIndexPathRow = indexPath.row
-        ratingsViewController.selectedIndexRowofBookList = indexPath.row
+        ratingsViewController.selectedIndexRowFromBookList = indexPath.row
         ratingsViewController.givenRating = bookList?[indexPath.row].rating
         
         self.navigationController?.pushViewController(ratingsViewController, animated: true)

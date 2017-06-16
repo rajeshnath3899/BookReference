@@ -13,7 +13,7 @@ class RatingsSelectionTableViewController: UITableViewController {
     
     private let ratings = [0,1,2,3,4,5]
     var givenRating: Int?
-    var selectedIndexRowofBookList: Int?
+    var selectedIndexRowFromBookList: Int?
     private var previouslySelectedCell: UITableViewCell?
     
     override func viewDidLoad() {
@@ -63,7 +63,7 @@ class RatingsSelectionTableViewController: UITableViewController {
             return
         }
         
-        BRServiceTransactionManager.sharedInstance.addRatingforBook(index: selectedIndexRowofBookList, withRating: ratings[indexPath.row]) { (response) in
+        BRServiceTransactionManager.sharedInstance.addRatingforBookOf(index: selectedIndexRowFromBookList, withRating: ratings[indexPath.row]) { (response) in
             
             switch(response) {
                 

@@ -24,7 +24,6 @@ class BRServiceTransactionManager {
         dataStore = []
     }
     
-    
     //add a book
     
     func addBook(book: Book, completion: @escaping (Result<Bool>) -> Void) {
@@ -37,25 +36,22 @@ class BRServiceTransactionManager {
     
     func getAllBooks(completion: @escaping (Result<[Book]>) -> Void) {
         completion(.success(dataStore))
-        //completion(.error("error info"))/* if network call fails error then call */
+        //completion(.error("error info")) /* if network call fails with error */
  
     }
     
     //add rating for book
-    func addRatingforBook(index:Int?,withRating rating: Int,completion: @escaping (Result<Bool>) -> Void) {
+    func addRatingforBookOf(index:Int?,withRating rating: Int,completion: @escaping (Result<Bool>) -> Void) {
         
         if let bookIndex = index {
-
-        var book: Book = dataStore[bookIndex]
-        
-        book.rating = rating
             
-        dataStore[bookIndex] = book
+            var book: Book = dataStore[bookIndex]
+            book.rating = rating
             
-        completion(.success(true))
-        
+            dataStore[bookIndex] = book
+            completion(.success(true))
+            
         } else {
-            
             completion(.error("Book index not found"))
         }
         
