@@ -37,12 +37,12 @@ class BRServiceTransactionManager {
     func getAllBooks(completion: @escaping (Result<[Book]>) -> Void) {
         
         if dataStore.count > 0 {
-        completion(.success(dataStore))
+            completion(.success(dataStore))
         } else{
             completion(.error("No Books"))
         }
         
- 
+        
     }
     
     //add rating for book

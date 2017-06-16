@@ -18,7 +18,6 @@ class RatingsSelectionTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -79,7 +78,6 @@ class RatingsSelectionTableViewController: UITableViewController {
         
         cell.accessoryType = .checkmark
     }
-    
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
 

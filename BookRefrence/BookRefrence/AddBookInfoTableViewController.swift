@@ -10,15 +10,11 @@ import UIKit
 
 class AddBookInfoTableViewController: UITableViewController {
     
-    
     @IBOutlet weak var bookNameTextField: UITextField!
-    
     @IBOutlet weak var authorNameTextField: UITextField!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,7 +36,6 @@ class AddBookInfoTableViewController: UITableViewController {
     @IBAction func cancel(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
-    
     
     
     @IBAction func Done(_ sender: UIBarButtonItem) {
