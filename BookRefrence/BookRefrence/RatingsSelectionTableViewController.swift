@@ -11,10 +11,10 @@ import UIKit
 
 class RatingsSelectionTableViewController: UITableViewController {
     
-    var ratings = [0,1,2,3,4,5]
+    private let ratings = [0,1,2,3,4,5]
     var givenRating: Int?
     var selectedIndexRowofBookList: Int?
-    var previouslySelectedCell: UITableViewCell?
+    private var previouslySelectedCell: UITableViewCell?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +29,10 @@ class RatingsSelectionTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return ratings.count
     }
     
@@ -45,18 +43,13 @@ class RatingsSelectionTableViewController: UITableViewController {
         // Configure the cell...
         
         if let rating = givenRating {
-            
             if rating == indexPath.row {
-                
                 cell.accessoryType = .checkmark
                 previouslySelectedCell = cell
-                
             }
             
         }
-        
         cell.textLabel?.text = String(ratings[indexPath.row])
-        
         return cell
     }
     
@@ -67,9 +60,7 @@ class RatingsSelectionTableViewController: UITableViewController {
         previouslySelectedCell?.accessoryType = .none
         
         guard let cell = selectedCell else {
-            
             return
-            
         }
         
         BRServiceTransactionManager.sharedInstance.addRatingforBook(index: selectedIndexRowofBookList, withRating: ratings[indexPath.row]) { (response) in
@@ -83,10 +74,7 @@ class RatingsSelectionTableViewController: UITableViewController {
             case .error(let errorInfo):
                 
                 print(errorInfo)
-                
             }
-            
-            
         }
         
         cell.accessoryType = .checkmark
@@ -98,13 +86,9 @@ class RatingsSelectionTableViewController: UITableViewController {
         let deSelectedCell = tableView.cellForRow(at: indexPath)
         
         guard let cell = deSelectedCell else {
-            
             return
-            
         }
-        
         cell.accessoryType = .none
-        
     }
     
 

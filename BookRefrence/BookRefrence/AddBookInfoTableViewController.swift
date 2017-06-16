@@ -29,20 +29,16 @@ class AddBookInfoTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 2
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 1
     }
     
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
-        
         dismiss(animated: true, completion: nil)
-        
     }
     
     
@@ -50,13 +46,11 @@ class AddBookInfoTableViewController: UITableViewController {
     @IBAction func Done(_ sender: UIBarButtonItem) {
         
         guard let bookName = bookNameTextField.text, let authorName = authorNameTextField.text else {
-            
             return
             
         }
         
         let book = Book(bookTitle: bookName, authorName: authorName)
-        
         
         BRServiceTransactionManager.sharedInstance.addBook(book: book) { [weak self] (response) in
             
@@ -82,9 +76,6 @@ class AddBookInfoTableViewController: UITableViewController {
                 
             }
             
-            
         }
-        
     }
-    
 }

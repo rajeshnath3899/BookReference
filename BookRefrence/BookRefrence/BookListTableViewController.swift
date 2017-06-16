@@ -9,8 +9,8 @@
 import UIKit
 
 class BookListTableViewController: UITableViewController {
-    var bookList: [Book]?
-    var lastSelectedIndexPathRow: Int?
+   private var bookList: [Book]?
+   private var lastSelectedIndexPathRow: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,15 +104,10 @@ class BookListTableViewController: UITableViewController {
     enum Rating: Int {
         
         case notRated
-        
         case oneStar
-        
         case twoStars
-        
         case threeStars
-        
         case fourStars
-        
         case fiveStars
         
         var image: UIImage {
@@ -122,13 +117,15 @@ class BookListTableViewController: UITableViewController {
             case .notRated:
                 
                 return UIImage(named: "GreyStars.png")!
-
+                
             case .oneStar:
                 
                 return UIImage(named: "1Stars.png")!
+                
             case .twoStars:
                 
                 return UIImage(named: "2Stars.png")!
+                
             case .threeStars:
                 
                 return UIImage(named: "3Stars.png")!
@@ -140,12 +137,8 @@ class BookListTableViewController: UITableViewController {
             case .fiveStars:
                 
                 return UIImage(named: "5Stars.png")!
-            
                 
             }
-            
         }
-        
     }
-    
 }
