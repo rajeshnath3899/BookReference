@@ -9,37 +9,36 @@
 import UIKit
 
 class BookListTableViewController: UITableViewController {
-   private var bookList: [Book]?
-   private var lastSelectedIndexPathRow: Int?
+    
+    private var lastSelectedIndexPathRow: Int?
+
+    private var bookList: [Book]? {
+        didSet {
+            if let noOfBooks = bookList?.count {
+                if noOfBooks > 1 {
+                    self.editButtonItem.isEnabled = true
+                } else if noOfBooks == 0 {
+                    self.editButtonItem.isEnabled = false
+                    self.setEditing(false, animated: true)
+                }
+            }
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
+        self.editButtonItem.isEnabled = false
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
-        BRServiceTransactionManager.sharedInstance.getAllBooks { [weak self] (response)  in
-            
-            guard let weakSelf = self else { return }
-            
-            switch(response) {
-                
-            case .success(let books):
-                
-                weakSelf.bookList = books
-                weakSelf.tableView.reloadData()
-                
-            case .error(let errorInfo):
-                
-                print(errorInfo)
-                
-            }
-            
-        }
+        fetchBooks()
     }
-
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -56,10 +55,8 @@ class BookListTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         
         guard let books = bookList else {
-            
-            return 1
+            return 0
         }
-        
         return books.count
     }
     
@@ -96,6 +93,66 @@ class BookListTableViewController: UITableViewController {
         ratingsViewController.givenRating = bookList?[indexPath.row].rating
         
         self.navigationController?.pushViewController(ratingsViewController, animated: true)
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        
+        return true
+        
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            BRServiceTransactionManager.sharedInstance.removeBookFrom(index: indexPath.row, completion: { [weak self] (response) in
+                
+                guard let weakSelf = self else {
+                    return
+                }
+                
+                switch(response) {
+                    
+                case .success(let books):
+                    
+                    weakSelf.bookList = books
+                    weakSelf.tableView.deleteRows(at: [indexPath], with: .automatic)
+                    print("Book removed")
+
+                case .error(let errorString):
+                    
+                    print(errorString)
+                    
+                }
+                
+            })
+            
+        }
+        
+    }
+    
+    
+    func fetchBooks() {
+        
+        BRServiceTransactionManager.sharedInstance.getAllBooks { [weak self] (response)  in
+            
+            guard let weakSelf = self else { return }
+            
+            switch(response) {
+                
+            case .success(let books):
+                weakSelf.bookList = books
+                weakSelf.tableView.reloadData()
+                weakSelf.editButtonItem.isEnabled = true
+            case .error(let errorInfo):
+                print(errorInfo)
+                weakSelf.editButtonItem.isEnabled = false
+                
+            }
+            
+        }
         
     }
     

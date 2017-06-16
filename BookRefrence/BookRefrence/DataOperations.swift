@@ -35,8 +35,13 @@ class BRServiceTransactionManager {
     //fetch all books
     
     func getAllBooks(completion: @escaping (Result<[Book]>) -> Void) {
+        
+        if dataStore.count > 0 {
         completion(.success(dataStore))
-        //completion(.error("error info")) /* if network call fails with error */
+        } else{
+            completion(.error("No Books"))
+        }
+        
  
     }
     
@@ -57,6 +62,19 @@ class BRServiceTransactionManager {
         
     }
     
+    // removing a book 
+    func removeBookFrom(index: Int, completion: @escaping (Result<[Book]>) -> Void) {
+        
+        if dataStore.count > 0 {
+            
+            dataStore.remove(at: index)
+            completion(.success(dataStore))
+            
+        } else {
+            completion(.error("No books to delete"))
+        }
+        
+    }
     
     
 
