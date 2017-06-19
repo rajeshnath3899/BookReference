@@ -35,14 +35,12 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZA-rB-Irz">
                                                             <rect key="frame" x="0.0" y="0.0" width="77" height="20.5"/>
-                                                            <accessibility key="accessibilityConfiguration" label="Book Title"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39l-yH-zu0">
                                                             <rect key="frame" x="0.0" y="20.5" width="43.5" height="17"/>
-                                                            <accessibility key="accessibilityConfiguration" label="Author"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -51,7 +49,7 @@
                                                 </stackView>
                                                 <imageView userInteractionEnabled="NO" tag="102" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreyStars" translatesAutoresizingMaskIntoConstraints="NO" id="JGw-9a-UuX">
                                                     <rect key="frame" x="201" y="0.0" width="85" height="52"/>
-                                                    <accessibility key="accessibilityConfiguration">
+                                                    <accessibility key="accessibilityConfiguration" label="Not Rated">
                                                         <bool key="isElement" value="YES"/>
                                                     </accessibility>
                                                     <constraints>
@@ -71,9 +69,6 @@
                                         <constraint firstItem="zso-EJ-VMl" firstAttribute="top" secondItem="JxH-f5-7Z6" secondAttribute="topMargin" id="mHB-7v-pLK"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <accessibility key="accessibilityConfiguration">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
                                 <connections>
                                     <outlet property="bookAuthorLabel" destination="39l-yH-zu0" id="Xum-lN-XVg"/>
                                     <outlet property="booktitleLabel" destination="OZA-rB-Irz" id="nzQ-me-KbV"/>

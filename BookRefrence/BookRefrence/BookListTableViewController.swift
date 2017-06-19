@@ -67,14 +67,23 @@ class BookListTableViewController: UITableViewController {
         
         // Configure the cell...
         
-        cell.booktitleLabel.text = bookList?[indexPath.row].title
-        cell.bookAuthorLabel.text = bookList?[indexPath.row].author
+        let bookTitle = bookList?[indexPath.row].title
+        let bookAuthor = bookList?[indexPath.row].author
+        
+        cell.booktitleLabel.text = bookTitle
+        cell.bookAuthorLabel.text = bookAuthor
+        
+        //adding accessibility 
+        cell.booktitleLabel.accessibilityLabel = bookTitle
+        cell.bookAuthorLabel.accessibilityLabel = bookAuthor
         
         if let rating  = bookList?[indexPath.row].rating {
             
             let starImage = Rating(rawValue: rating)?.image
-            
             cell.ratingImageView?.image = starImage
+            
+            cell.ratingImageView.accessibilityLabel = String("Rated \(rating) out of 5")
+
         }
         
         return cell

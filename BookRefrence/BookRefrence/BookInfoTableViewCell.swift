@@ -18,6 +18,9 @@ class BookInfoTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.accessibilityElements = [booktitleLabel,bookAuthorLabel,ratingImageView]
+        
         // Initialization code
     }
 
