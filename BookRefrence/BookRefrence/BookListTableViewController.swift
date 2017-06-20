@@ -11,7 +11,7 @@ import UIKit
 class BookListTableViewController: UITableViewController {
     
     private var lastSelectedIndexPathRow: Int?
-
+    
     private var bookList: [Book]? {
         didSet {
             if let noOfBooks = bookList?.count {
@@ -23,18 +23,15 @@ class BookListTableViewController: UITableViewController {
                 }
             }
         }
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         self.editButtonItem.isEnabled = false
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         fetchBooks()
     }
     
@@ -63,7 +60,9 @@ class BookListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: BookInfoTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.BookInfoCellreuseId, for: indexPath) as! BookInfoTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.BookInfoCellreuseId, for: indexPath) as? BookInfoTableViewCell else {
+            fatalError("BookInfoTableViewCell is not in the table view")
+        }
         
         // Configure the cell...
         
@@ -73,19 +72,16 @@ class BookListTableViewController: UITableViewController {
         cell.booktitleLabel.text = bookTitle
         cell.bookAuthorLabel.text = bookAuthor
         
-        //adding accessibility 
+        //adding accessibility
         cell.booktitleLabel.accessibilityLabel = bookTitle
         cell.bookAuthorLabel.accessibilityLabel = bookAuthor
         
         if let rating  = bookList?[indexPath.row].rating {
-            
             let starImage = Rating(rawValue: rating)?.image
             cell.ratingImageView?.image = starImage
             
             cell.ratingImageView.accessibilityLabel = String("Rated \(rating) out of 5")
-
         }
-        
         return cell
     }
     
@@ -106,9 +102,7 @@ class BookListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        
         return true
-        
     }
     
     
@@ -129,7 +123,7 @@ class BookListTableViewController: UITableViewController {
                     weakSelf.bookList = books
                     weakSelf.tableView.deleteRows(at: [indexPath], with: .automatic)
                     print("Book removed")
-
+                    
                 case .error(let errorString):
                     
                     print(errorString)
@@ -141,7 +135,6 @@ class BookListTableViewController: UITableViewController {
         }
         
     }
-    
     
     func fetchBooks() {
         
@@ -158,11 +151,8 @@ class BookListTableViewController: UITableViewController {
             case .error(let errorInfo):
                 print(errorInfo)
                 weakSelf.editButtonItem.isEnabled = false
-                
             }
-            
         }
-        
     }
     
     enum Rating: Int {
@@ -174,35 +164,42 @@ class BookListTableViewController: UITableViewController {
         case fourStars
         case fiveStars
         
-        var image: UIImage {
+        var image: UIImage? {
             
             switch self {
                 
             case .notRated:
                 
-                return UIImage(named: "GreyStars.png")!
+                return ImageAsset.notRated.image
                 
             case .oneStar:
                 
-                return UIImage(named: "1Stars.png")!
+                return ImageAsset.oneStar.image
                 
             case .twoStars:
                 
-                return UIImage(named: "2Stars.png")!
+                return ImageAsset.twoStars.image
                 
             case .threeStars:
                 
-                return UIImage(named: "3Stars.png")!
+                return ImageAsset.threeStars.image
                 
             case .fourStars:
                 
-                return UIImage(named: "4Stars.png")!
+                return ImageAsset.fourStars.image
                 
             case .fiveStars:
                 
-                return UIImage(named: "5Stars.png")!
+                return ImageAsset.fiveStars.image
                 
             }
         }
+    }
+    
+}
+
+extension ImageAsset {
+    var image : UIImage? {
+        return UIImage(named: self.rawValue)
     }
 }
