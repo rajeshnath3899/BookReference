@@ -26,7 +26,7 @@ class ServiceTransactionManager {
     
     //add a book
     
-    func addBook(book: Book, completion: @escaping (Result<Bool>) -> Void) {
+    func add(_ book: Book, completion: @escaping (Result<Bool>) -> Void) {
         
         dataStore.append(book)
         completion(.success(true)) // on sucess 
@@ -44,11 +44,11 @@ class ServiceTransactionManager {
         
         
     }
-    
+
     //add rating for book
-    func addRatingforBookOf(index:Int?,withRating rating: Int,completion: @escaping (Result<Bool>) -> Void) {
+    func addRatingforBookAt(index position:Int?,withRating rating: Int,completion: @escaping (Result<Bool>) -> Void) {
         
-        if let bookIndex = index {
+        if let bookIndex = position {
             
             var book: Book = dataStore[bookIndex]
             book.rating = rating

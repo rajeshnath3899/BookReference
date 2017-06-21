@@ -45,9 +45,9 @@ class AddBookInfoTableViewController: UITableViewController {
             
         }
         
-        let book = Book(bookTitle: bookName, authorName: authorName)
+        let newlyRead = Book(bookTitle: bookName, authorName: authorName)
         
-        ServiceTransactionManager.sharedInstance.addBook(book: book) { [weak self] (response) in
+        ServiceTransactionManager.sharedInstance.add(newlyRead) { [weak self] (response) in
             
             guard let weakSelf = self else { return }
             

@@ -94,7 +94,7 @@ class BookListTableViewController: UITableViewController {
         
         // ratingsViewController.delegate = self
         lastSelectedIndexPathRow = indexPath.row
-        ratingsViewController.selectedIndexRowFromBookList = indexPath.row
+        ratingsViewController.selectedBookIndex = indexPath.row
         ratingsViewController.givenRating = bookList?[indexPath.row].rating
         
         self.navigationController?.pushViewController(ratingsViewController, animated: true)
@@ -195,7 +195,6 @@ class BookListTableViewController: UITableViewController {
             }
         }
     }
-    
 }
 
 extension ImageAsset {
