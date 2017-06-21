@@ -13,11 +13,11 @@ enum Result <T> {
     case error(String)  // would be needed in case of real network transactions
 }
 
-class BRServiceTransactionManager {
+class ServiceTransactionManager {
     
     private var dataStore: [Book] // using swift array
     
-    static let sharedInstance = BRServiceTransactionManager()
+    static let sharedInstance = ServiceTransactionManager()
 
     private init() {
         

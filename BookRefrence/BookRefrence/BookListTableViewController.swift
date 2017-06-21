@@ -110,7 +110,7 @@ class BookListTableViewController: UITableViewController {
         
         if editingStyle == .delete {
             
-            BRServiceTransactionManager.sharedInstance.removeBookFrom(index: indexPath.row, completion: { [weak self] (response) in
+            ServiceTransactionManager.sharedInstance.removeBookFrom(index: indexPath.row, completion: { [weak self] (response) in
                 
                 guard let weakSelf = self else {
                     return
@@ -138,7 +138,7 @@ class BookListTableViewController: UITableViewController {
     
     func fetchBooks() {
         
-        BRServiceTransactionManager.sharedInstance.getAllBooks { [weak self] (response)  in
+        ServiceTransactionManager.sharedInstance.getAllBooks { [weak self] (response)  in
             
             guard let weakSelf = self else { return }
             

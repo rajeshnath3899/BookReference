@@ -62,7 +62,7 @@ class RatingsSelectionTableViewController: UITableViewController {
             return
         }
         
-        BRServiceTransactionManager.sharedInstance.addRatingforBookOf(index: selectedIndexRowFromBookList, withRating: ratings[indexPath.row]) { (response) in
+        ServiceTransactionManager.sharedInstance.addRatingforBookOf(index: selectedIndexRowFromBookList, withRating: ratings[indexPath.row]) { (response) in
             
             switch(response) {
                 
