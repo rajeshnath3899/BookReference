@@ -77,5 +77,11 @@ class ServiceTransactionManager {
     }
     
     
+    func removeAllBooks() {
+        
+        
+    }
+    
+    
 
 }
