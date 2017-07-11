@@ -63,13 +63,19 @@ class RatingsSelectionTableViewController: UITableViewController {
         }
         
         
-        ServiceTransactionManager.sharedInstance.addRatingforBookAt(index: selectedBookIndex, withRating: ratings[indexPath.row]) { (response) in
+        ServiceTransactionManager.sharedInstance.addRatingforBookAt(index: selectedBookIndex, withRating: ratings[indexPath.row]) { [weak self] (response) in
+            
+            guard let weakSelf = self else { return }
             
             switch(response) {
                 
             case .success(let result):
                 
                 print(result)
+                cell.accessoryType = .checkmark
+                
+                weakSelf.navigationController?.popViewController(animated: true)
+
                 
             case .error(let errorInfo):
                 
@@ -77,7 +83,6 @@ class RatingsSelectionTableViewController: UITableViewController {
             }
         }
         
-        cell.accessoryType = .checkmark
     }
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {

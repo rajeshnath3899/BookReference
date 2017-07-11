@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "84E68DF81EE837F500FEF26F"
-               BuildableName = "BookRefrence.app"
-               BlueprintName = "BookRefrence"
-               ReferencedContainer = "container:BookRefrence.xcodeproj">
+               BuildableName = "BookReview.app"
+               BlueprintName = "BookReview"
+               ReferencedContainer = "container:BookReview.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84E68DF81EE837F500FEF26F"
-            BuildableName = "BookRefrence.app"
-            BlueprintName = "BookRefrence"
-            ReferencedContainer = "container:BookRefrence.xcodeproj">
+            BuildableName = "BookReview.app"
+            BlueprintName = "BookReview"
+            ReferencedContainer = "container:BookReview.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84E68DF81EE837F500FEF26F"
-            BuildableName = "BookRefrence.app"
-            BlueprintName = "BookRefrence"
-            ReferencedContainer = "container:BookRefrence.xcodeproj">
+            BuildableName = "BookReview.app"
+            BlueprintName = "BookReview"
+            ReferencedContainer = "container:BookReview.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84E68DF81EE837F500FEF26F"
-            BuildableName = "BookRefrence.app"
-            BlueprintName = "BookRefrence"
-            ReferencedContainer = "container:BookRefrence.xcodeproj">
+            BuildableName = "BookReview.app"
+            BlueprintName = "BookReview"
+            ReferencedContainer = "container:BookReview.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
