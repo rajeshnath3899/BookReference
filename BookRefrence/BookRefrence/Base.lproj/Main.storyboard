@@ -13,14 +13,14 @@
         <!--Book Info-->
         <scene sceneID="92m-CC-lBN">
             <objects>
-                <tableViewController storyboardIdentifier="BookInfoId" id="yBH-pW-G87" customClass="BookListTableViewController" customModule="BookRefrence" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BookInfoId" id="yBH-pW-G87" customClass="BookListTableViewController" customModule="BookReview" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" id="ICc-ZD-JBB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.70578706260000001" green="0.77590769530000003" blue="0.81595987079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.16053155064582825" green="0.67138481140136719" blue="0.88590353727340698" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BookInfoCell" rowHeight="68" id="fOC-bq-D14" customClass="BookInfoTableViewCell" customModule="BookRefrence" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BookInfoCell" rowHeight="68" id="fOC-bq-D14" customClass="BookInfoTableViewCell" customModule="BookReview" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="68"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fOC-bq-D14" id="JxH-f5-7Z6">
@@ -96,7 +96,7 @@
         <!--Ratings Selection Table View Controller-->
         <scene sceneID="fRe-QJ-dv4">
             <objects>
-                <tableViewController storyboardIdentifier="RatingsTableViewControllerID" id="neR-ed-vzx" customClass="RatingsSelectionTableViewController" customModule="BookRefrence" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="RatingsTableViewControllerID" id="neR-ed-vzx" customClass="RatingsSelectionTableViewController" customModule="BookReview" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rml-RH-iUl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,11 +125,11 @@
         <!--Add Book Info Table View Controller-->
         <scene sceneID="sUa-eP-Zyl">
             <objects>
-                <tableViewController storyboardIdentifier="AddBookInfoId" id="nyR-Hs-h2P" customClass="AddBookInfoTableViewController" customModule="BookRefrence" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AddBookInfoId" id="nyR-Hs-h2P" customClass="AddBookInfoTableViewController" customModule="BookReview" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kVX-qO-hCh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.70578706260000001" green="0.77590769530000003" blue="0.81595987079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.16053155064582825" green="0.67138481140136719" blue="0.88590353727340698" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Title" id="BBW-Ko-HWV">
                                 <cells>
