@@ -15,7 +15,7 @@ enum Result <T> {
 
 class ServiceTransactionManager {
     
-    private var dataStore: [Book] // using swift array
+    private var dataStore: [Book] // using swift array since no real services exist
     
     static let sharedInstance = ServiceTransactionManager()
 
@@ -24,12 +24,15 @@ class ServiceTransactionManager {
         dataStore = []
     }
     
+    // All API's written are considering the real network transaction
+    // since no services for this app exist , we are using swift array.
+    
     //add a book
     
     func add(_ book: Book, completion: @escaping (Result<Bool>) -> Void) {
         
         dataStore.append(book)
-        completion(.success(true)) // on sucess 
+        completion(.success(true)) // on sucess
     }
     
     //fetch all books
@@ -46,6 +49,7 @@ class ServiceTransactionManager {
     }
 
     //add rating for book
+    
     func addRatingforBookAt(index position:Int?,withRating rating: Int,completion: @escaping (Result<Bool>) -> Void) {
         
         if let bookIndex = position {
