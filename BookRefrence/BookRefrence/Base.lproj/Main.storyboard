@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Book Info-->
+        <!--Books-->
         <scene sceneID="92m-CC-lBN">
             <objects>
                 <tableViewController storyboardIdentifier="BookInfoId" id="yBH-pW-G87" customClass="BookListTableViewController" customModule="BookReview" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,7 +82,7 @@
                             <outlet property="delegate" destination="yBH-pW-G87" id="HxY-Fa-wvn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Book Info" id="OXm-S5-rwj">
+                    <navigationItem key="navigationItem" title="Books" id="OXm-S5-rwj">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zdU-gt-DnS">
                             <connections>
                                 <segue destination="Gpm-4p-7cv" kind="presentation" id="EZo-i1-d2O"/>
