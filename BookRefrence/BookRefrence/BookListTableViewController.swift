@@ -27,8 +27,11 @@ class BookListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         self.editButtonItem.isEnabled = false
+        
+        self.tableView.allowsSelectionDuringEditing = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -86,20 +89,27 @@ class BookListTableViewController: UITableViewController {
     }
     
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        guard let ratingsViewController: RatingsSelectionTableViewController = storyboard?.instantiateViewController(withIdentifier: Constants.RatingsTableViewControllerID) as? RatingsSelectionTableViewController  else {
-            return
+        if (segue.identifier == Constants.showBookDetailSegueId) {
+            
+            guard let selectedIndex: IndexPath = tableView.indexPathForSelectedRow else { return }
+            
+            guard let bookDetailViewController: BookDetailViewController = segue.destination as? BookDetailViewController else {
+                
+                return
+            
+            }
+            
+            bookDetailViewController.bookDetailPassed = bookList?[selectedIndex.row]
+            bookDetailViewController.selectedBookIndexPassed = selectedIndex.row
+            
+            
         }
         
-        // ratingsViewController.delegate = self
-        lastSelectedIndexPathRow = indexPath.row
-        ratingsViewController.selectedBookIndex = indexPath.row
-        ratingsViewController.givenRating = bookList?[indexPath.row].rating
-        
-        self.navigationController?.pushViewController(ratingsViewController, animated: true)
         
     }
+    
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
@@ -136,6 +146,8 @@ class BookListTableViewController: UITableViewController {
         
     }
     
+    // fetch all the books from the datastore
+    
     func fetchBooks() {
         
         ServiceTransactionManager.sharedInstance.getAllBooks { [weak self] (response)  in
@@ -154,6 +166,7 @@ class BookListTableViewController: UITableViewController {
             }
         }
     }
+    
     
     enum Rating: Int {
         
@@ -196,6 +209,7 @@ class BookListTableViewController: UITableViewController {
         }
     }
 }
+
 
 extension ImageAsset {
     var image : UIImage? {

@@ -12,6 +12,26 @@ struct Constants {
     static let RatingsCellreuseId = "RatingsCell"
     static let BookInfoCellreuseId = "BookInfoCell"
     static let RatingsTableViewControllerID = "RatingsTableViewControllerID"
+    static let ShowBookDetailTableViewControllerID = "ShowBookDetailControllerID"
+    
+    // segue ID's
+    
+    static let showBookDetailSegueId = "showBookDetail"
+    
+    // Button titles
+    
+    struct ButtonTitle {
+       
+        static let Edit = "Edit"
+        static let Done = "Done"
+        static let Cancel = "Cancel"
+        static let Close = "Close"
+        
+    }
+    
+    
+    
+    
 }
 
 enum ImageAsset: String {

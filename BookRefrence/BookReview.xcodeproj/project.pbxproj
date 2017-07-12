@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84009AC11F15029A00160E84 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84009AC01F15029A00160E84 /* BookDetailViewController.swift */; };
+		84009AC31F150E6E00160E84 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84009AC21F150E6E00160E84 /* RatingControl.swift */; };
 		845F2F8F1EF105C600D13645 /* RatingsSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F2F8E1EF105C600D13645 /* RatingsSelectionTableViewController.swift */; };
 		845F2F941EF1507E00D13645 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F2F931EF1507E00D13645 /* Constants.swift */; };
 		845F2F961EF163CA00D13645 /* BookListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F2F951EF163CA00D13645 /* BookListTableViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84009AC01F15029A00160E84 /* BookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		84009AC21F150E6E00160E84 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		845F2F8E1EF105C600D13645 /* RatingsSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingsSelectionTableViewController.swift; sourceTree = "<group>"; };
 		845F2F931EF1507E00D13645 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		845F2F951EF163CA00D13645 /* BookListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookListTableViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +57,7 @@
 				845F2F951EF163CA00D13645 /* BookListTableViewController.swift */,
 				845F2F8E1EF105C600D13645 /* RatingsSelectionTableViewController.swift */,
 				84E68E171EE9290300FEF26F /* AddBookInfoTableViewController.swift */,
+				84009AC01F15029A00160E84 /* BookDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -61,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				84E68E141EE8ED8C00FEF26F /* BookInfoTableViewCell.swift */,
+				84009AC21F150E6E00160E84 /* RatingControl.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -192,9 +198,11 @@
 				845F2F961EF163CA00D13645 /* BookListTableViewController.swift in Sources */,
 				84E68DFD1EE837F500FEF26F /* AppDelegate.swift in Sources */,
 				84E68E181EE9290300FEF26F /* AddBookInfoTableViewController.swift in Sources */,
+				84009AC11F15029A00160E84 /* BookDetailViewController.swift in Sources */,
 				84E68E151EE8ED8C00FEF26F /* BookInfoTableViewCell.swift in Sources */,
 				84E68E1A1EE92EC600FEF26F /* DataOperations.swift in Sources */,
 				845F2F981EF1640C00D13645 /* Book.swift in Sources */,
+				84009AC31F150E6E00160E84 /* RatingControl.swift in Sources */,
 				845F2F941EF1507E00D13645 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

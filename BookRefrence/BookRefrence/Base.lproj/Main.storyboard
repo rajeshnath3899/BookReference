@@ -17,7 +17,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" id="ICc-ZD-JBB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.16053155064582825" green="0.67138481140136719" blue="0.88590353727340698" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.47020971779999998" green="0.61833620069999995" blue="0.71100538970000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BookInfoCell" rowHeight="68" id="fOC-bq-D14" customClass="BookInfoTableViewCell" customModule="BookReview" customModuleProvider="target">
@@ -73,6 +73,7 @@
                                     <outlet property="bookAuthorLabel" destination="39l-yH-zu0" id="Xum-lN-XVg"/>
                                     <outlet property="booktitleLabel" destination="OZA-rB-Irz" id="nzQ-me-KbV"/>
                                     <outlet property="ratingImageView" destination="JGw-9a-UuX" id="DWh-y8-4fF"/>
+                                    <segue destination="vfj-0E-jno" kind="show" identifier="showBookDetail" id="uLe-BL-PVe"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -92,6 +93,117 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f09-iu-blx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="693.60000000000002" y="160.56971514242881"/>
+        </scene>
+        <!--Book Detail View Controller-->
+        <scene sceneID="hLJ-E8-MiO">
+            <objects>
+                <viewController id="vfj-0E-jno" customClass="BookDetailViewController" customModule="BookReview" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vwW-Du-IE9"/>
+                        <viewControllerLayoutGuide type="bottom" id="cOk-Ff-seB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RnE-ok-qfo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJw-H0-NAu">
+                                <rect key="frame" x="16" y="168" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LoH-3T-9RT">
+                                <rect key="frame" x="16" y="197" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="2hv-5w-cOV"/>
+                                    <constraint firstAttribute="height" constant="30" id="R8k-QM-ee9"/>
+                                </constraints>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhX-XF-Owc">
+                                <rect key="frame" x="16" y="97" width="77" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="iZW-Vn-xR1"/>
+                                    <constraint firstAttribute="width" constant="77" id="qBs-IC-uFj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZW-yN-Pou">
+                                <rect key="frame" x="16" y="123" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="0ra-A5-2ux"/>
+                                    <constraint firstAttribute="height" constant="30" id="u2T-dX-6lF"/>
+                                </constraints>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnV-zZ-bFK">
+                                <rect key="frame" x="16" y="242" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uE6-0R-GHQ" customClass="RatingControl" customModule="BookReview" customModuleProvider="target">
+                                <rect key="frame" x="16" y="271" width="249" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47020971779999998" green="0.61833620069999995" blue="0.71100538970000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="OhX-XF-Owc" secondAttribute="leading" id="1O2-6I-hgN"/>
+                            <constraint firstItem="LoH-3T-9RT" firstAttribute="top" secondItem="cJw-H0-NAu" secondAttribute="bottom" constant="8" symbolic="YES" id="3YP-4k-zFG"/>
+                            <constraint firstItem="hZW-yN-Pou" firstAttribute="trailing" secondItem="LoH-3T-9RT" secondAttribute="trailing" id="3yO-QD-c2S"/>
+                            <constraint firstItem="hZW-yN-Pou" firstAttribute="leading" secondItem="cJw-H0-NAu" secondAttribute="leading" id="6Vv-TC-qRl"/>
+                            <constraint firstItem="OhX-XF-Owc" firstAttribute="top" secondItem="vwW-Du-IE9" secondAttribute="bottom" constant="33" id="FdZ-wL-0td"/>
+                            <constraint firstItem="hZW-yN-Pou" firstAttribute="leading" secondItem="LoH-3T-9RT" secondAttribute="leading" id="I7g-pn-rOo"/>
+                            <constraint firstItem="cJw-H0-NAu" firstAttribute="top" secondItem="hZW-yN-Pou" secondAttribute="bottom" constant="15" id="MvW-4n-56m"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="LoH-3T-9RT" secondAttribute="leading" id="RJr-jq-LbT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hZW-yN-Pou" secondAttribute="trailing" id="T6c-RL-1VR"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="hZW-yN-Pou" secondAttribute="leading" id="Yoc-go-wEz"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="hnV-zZ-bFK" secondAttribute="leading" id="d1s-Jc-M2T"/>
+                            <constraint firstItem="hnV-zZ-bFK" firstAttribute="top" secondItem="LoH-3T-9RT" secondAttribute="bottom" constant="15" id="gvB-DR-PeT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LoH-3T-9RT" secondAttribute="trailing" id="n86-Hv-KDI"/>
+                            <constraint firstItem="hZW-yN-Pou" firstAttribute="top" secondItem="OhX-XF-Owc" secondAttribute="bottom" constant="5.5" id="t7L-jQ-0hj"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="kPy-WU-Hhp">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="a6C-QT-I34">
+                            <connections>
+                                <action selector="close:" destination="vfj-0E-jno" id="mpr-hq-tgj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="yxE-o7-k9C">
+                            <connections>
+                                <action selector="Edit:" destination="vfj-0E-jno" id="J8a-HG-WoF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="authorNameTextField" destination="LoH-3T-9RT" id="Isj-zQ-66Z"/>
+                        <outlet property="bookNameTextField" destination="hZW-yN-Pou" id="dbJ-I0-9xC"/>
+                        <outlet property="closeButton" destination="a6C-QT-I34" id="ky1-gz-AFv"/>
+                        <outlet property="editButton" destination="yxE-o7-k9C" id="OZL-6V-QWe"/>
+                        <outlet property="ratingControl" destination="uE6-0R-GHQ" id="Chh-v8-Mwz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gGs-VU-slR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="629.60000000000002" y="976.46176911544239"/>
         </scene>
         <!--Ratings Selection Table View Controller-->
         <scene sceneID="fRe-QJ-dv4">
@@ -120,7 +232,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hy4-Ex-2jf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="694" y="824"/>
+            <point key="canvasLocation" x="2537" y="1068"/>
         </scene>
         <!--Add Book Info Table View Controller-->
         <scene sceneID="sUa-eP-Zyl">
@@ -129,7 +241,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kVX-qO-hCh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.16053155059999999" green="0.67138481139999995" blue="0.88590353730000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.47020971779999998" green="0.61833620069999995" blue="0.71100538970000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Title" id="BBW-Ko-HWV">
                                 <cells>
@@ -198,7 +310,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDc-gp-CtK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2545" y="161"/>
+            <point key="canvasLocation" x="2425" y="161"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="u4e-5i-Jee">

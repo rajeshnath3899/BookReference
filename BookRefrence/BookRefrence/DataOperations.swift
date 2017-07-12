@@ -18,14 +18,14 @@ class ServiceTransactionManager {
     private var dataStore: [Book] // using swift array since no real services exist
     
     static let sharedInstance = ServiceTransactionManager()
-
+    
     private init() {
         
         dataStore = []
     }
     
     // All API's written are considering the real network transaction
-    // since no services for this app exist , we are using swift array.
+    // since no services for this app exist , swift array is used .
     
     //add a book
     
@@ -47,15 +47,12 @@ class ServiceTransactionManager {
         
         
     }
-
-    //add rating for book
     
-    func addRatingforBookAt(index position:Int?,withRating rating: Int,completion: @escaping (Result<Bool>) -> Void) {
+    //update details for a book
+    
+    func updateBookAt(index position:Int?, with book: Book,completion: @escaping (Result<Bool>) -> Void) {
         
         if let bookIndex = position {
-            
-            var book: Book = dataStore[bookIndex]
-            book.rating = rating
             
             dataStore[bookIndex] = book
             completion(.success(true))
@@ -66,7 +63,7 @@ class ServiceTransactionManager {
         
     }
     
-    // removing a book 
+    // removing a book
     func removeBookFrom(index: Int, completion: @escaping (Result<[Book]>) -> Void) {
         
         if dataStore.count > 0 {

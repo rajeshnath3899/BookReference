@@ -42,7 +42,6 @@ class AddBookInfoTableViewController: UITableViewController {
         
         guard let bookName = bookNameTextField.text, let authorName = authorNameTextField.text else {
             return
-            
         }
         
         let newlyRead = Book(bookTitle: bookName, authorName: authorName)
