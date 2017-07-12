@@ -50,9 +50,9 @@ class ServiceTransactionManager {
     
     //update details for a book
     
-    func updateBookAt(index position:Int?, with book: Book,completion: @escaping (Result<Bool>) -> Void) {
+    func updateBookAt(index :Int?, with book: Book,completion: @escaping (Result<Bool>) -> Void) {
         
-        if let bookIndex = position {
+        if let bookIndex = index {
             
             dataStore[bookIndex] = book
             completion(.success(true))
