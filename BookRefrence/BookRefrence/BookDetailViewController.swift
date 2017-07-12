@@ -121,7 +121,7 @@ class BookDetailViewController: UIViewController {
         
     }
     
-    // initilising the textfeilds with values
+    // initilising the textfields with values
     
     func setValuesToFieldsAndControl() {
         
