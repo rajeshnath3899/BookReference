@@ -9,8 +9,14 @@
 import Foundation
 
 struct Constants {
+    
+    // UITableviewCell resuse ID's
+    
     static let RatingsCellreuseId = "RatingsCell"
     static let BookInfoCellreuseId = "BookInfoCell"
+    
+    // StoryBoard ID's
+    
     static let RatingsTableViewControllerID = "RatingsTableViewControllerID"
     static let ShowBookDetailTableViewControllerID = "ShowBookDetailControllerID"
     
@@ -21,16 +27,13 @@ struct Constants {
     // Button titles
     
     struct ButtonTitle {
-       
+        
         static let Edit = "Edit"
         static let Done = "Done"
         static let Cancel = "Cancel"
         static let Close = "Close"
         
     }
-    
-    
-    
     
 }
 

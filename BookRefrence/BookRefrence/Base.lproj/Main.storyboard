@@ -205,35 +205,6 @@
             </objects>
             <point key="canvasLocation" x="629.60000000000002" y="976.46176911544239"/>
         </scene>
-        <!--Ratings Selection Table View Controller-->
-        <scene sceneID="fRe-QJ-dv4">
-            <objects>
-                <tableViewController storyboardIdentifier="RatingsTableViewControllerID" id="neR-ed-vzx" customClass="RatingsSelectionTableViewController" customModule="BookReview" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rml-RH-iUl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RatingsCell" id="nCB-5Q-Zhx">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nCB-5Q-Zhx" id="i85-Wr-Cn0">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="neR-ed-vzx" id="q0K-bj-Wl3"/>
-                            <outlet property="delegate" destination="neR-ed-vzx" id="MMd-2L-W1C"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="aL5-OM-g0T"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hy4-Ex-2jf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2537" y="1068"/>
-        </scene>
         <!--Add Book Info Table View Controller-->
         <scene sceneID="sUa-eP-Zyl">
             <objects>
