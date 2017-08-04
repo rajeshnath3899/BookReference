@@ -21,6 +21,7 @@ class BookInfoTableViewCell: UITableViewCell {
         
         self.accessibilityElements = [booktitleLabel,bookAuthorLabel,ratingImageView]
         
+        
         // Initialization code
     }
 

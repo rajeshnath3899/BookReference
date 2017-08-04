@@ -127,6 +127,7 @@ class BookDetailViewController: UIViewController {
         
         bookNameTextField.text = bookDetailPassed?.title
         authorNameTextField.text = bookDetailPassed?.author
+        
         if let rating = bookDetailPassed?.rating {
             
             ratingControl.rating = rating

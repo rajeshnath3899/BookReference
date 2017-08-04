@@ -32,6 +32,9 @@ class ServiceTransactionManager {
     func add(_ book: Book, completion: @escaping (Result<Bool>) -> Void) {
         
         dataStore.append(book)
+        
+        // network call code
+        
         completion(.success(true)) // on sucess
     }
     
@@ -39,7 +42,12 @@ class ServiceTransactionManager {
     
     func getAllBooks(completion: @escaping (Result<[Book]>) -> Void) {
         
+        
+        // network call code
+
+        
         if dataStore.count > 0 {
+            
             completion(.success(dataStore))
         } else{
             completion(.error("No Books"))

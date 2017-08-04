@@ -19,5 +19,4 @@ struct Book {
          author = authorName
     }
     
-    
 }

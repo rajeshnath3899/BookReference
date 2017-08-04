@@ -205,6 +205,36 @@
             </objects>
             <point key="canvasLocation" x="629.60000000000002" y="976.46176911544239"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="D5V-da-eET">
+            <objects>
+                <viewController id="Stl-1S-1mo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="etf-u1-bCy"/>
+                        <viewControllerLayoutGuide type="bottom" id="z8g-g4-WWK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f6c-Ym-HCf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XuO-tG-QaI">
+                                <rect key="frame" x="214" y="227" width="34" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Sign"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.31138169765472412" green="0.61919683218002319" blue="0.96391588449478149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ctL-db-kXx">
+                        <barButtonItem key="rightBarButtonItem" title="Open" id="Iot-cW-e2B"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FIH-fr-nJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1568.8" y="1689.8050974512746"/>
+        </scene>
         <!--Add Book Info Table View Controller-->
         <scene sceneID="sUa-eP-Zyl">
             <objects>
@@ -318,6 +348,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G2S-hU-4nY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1564" y="161"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="on2-V2-CpM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9jo-ef-flb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="j6J-9Q-b0T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Stl-1S-1mo" kind="relationship" relationship="rootViewController" id="iBu-9x-Oz2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZUm-ED-cME" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="629.60000000000002" y="1689.8050974512746"/>
         </scene>
     </scenes>
     <resources>
