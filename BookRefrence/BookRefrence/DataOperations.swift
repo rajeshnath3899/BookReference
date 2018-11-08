@@ -13,7 +13,7 @@ enum Result <T> {
     case error(String)  // would be needed in case of real network transactions
 }
 
-/* `ServiceTransactionManager` uses Singleton approach which is not a recommended way, its better to go for dependency injection here.
+/* `ServiceTransactionManager` uses Singleton approach which is not a recommended way, its better to go for dependency injection.
  */
 
 class ServiceTransactionManager {
